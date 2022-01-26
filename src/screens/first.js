@@ -10,6 +10,8 @@ const data = [
     'https://cdn.pixabay.com/photo/2017/06/05/07/59/octopus-2373177__340.png',
     'https://cdn.pixabay.com/photo/2017/02/01/09/48/dog-2029214__340.jpg',
     'https://cdn.pixabay.com/photo/2017/06/16/10/14/underwater-2408569__340.jpg',
+    'https://cdn.pixabay.com/photo/2021/11/05/01/30/snow-6769948__340.jpg',
+    'https://cdn.pixabay.com/photo/2019/09/17/14/48/street-4483722__340.jpg',
 ];
 
 const imageW = width * 0.7;
@@ -25,6 +27,7 @@ const First = () => {
                 data={data}
                 keyExtractor={(_ ,index) => index.toString()} 
                 horizontal
+                pagingEnabled
                 renderItem={({item})=> {
                     return <View style={{width, justifyContent: 'center', alignItems: 'center'}}>
                         <Image source={{uri: item}} style={{width: imageW, height: imageH, resizeMode: 'cover', borderRadius: 16,}} />
